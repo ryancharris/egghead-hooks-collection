@@ -2,19 +2,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background: #0a3666
-    url("https://uploads.codesandbox.io/uploads/user/95e61168-d258-4886-b461-94339488367b/RQv5-mars.png");
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-blend-mode: screen;
-}
-
-.App {
-  font-family: sans-serif;
-  text-align: center;
-}
-
 .App__header {
   height: 72px;
   display: flex;
@@ -42,6 +29,23 @@ body {
   border-radius: 4px;
   border: 1px solid black;
   box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.App__square {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  border-radius: 50%;
+}
+
+.App__square--purple {
+  background: rebeccapurple;
+}
+
+.App__square--green {
+  background: green;
 }
 
 /* 02-use-effect */
