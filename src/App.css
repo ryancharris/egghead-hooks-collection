@@ -31,21 +31,24 @@
   box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.25);
 }
 
-.App__square {
+.Modal {
+  display: flex;
+  flex-direction: column;
   width: 100px;
   height: 100px;
   position: absolute;
-  top: 50px;
   left: 0;
-  border-radius: 50%;
+  border-radius: 4px;
 }
 
-.App__square--purple {
-  background: rebeccapurple;
+.Modal--purple {
+  top: 25px;
+  border: 3px solid rebeccapurple;
 }
 
-.App__square--green {
-  background: green;
+.Modal--lime {
+  bottom: 25px;
+  border: 3px solid limegreen;
 }
 
 /* 02-use-effect */

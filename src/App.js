@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-import Circles from "./03-use-layout-effect/Circles";
+import Modals from "./03-use-layout-effect/Modals";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <p>useLayoutEffect</p>
       </header>
       <main className="App__main">
-        <Circles />
+        <Modals />
       </main>
     </div>
   );
