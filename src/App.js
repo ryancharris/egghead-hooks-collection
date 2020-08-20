@@ -1,16 +1,13 @@
 import React from "react";
 import "./App.css";
 
-import Counters from './05-use-ref-data/Counters'
+import Search from "./06-use-context/Search";
 
 function App() {
   return (
     <div className="App">
-      <header className="App__header">
-        <p>useRef</p>
-      </header>
       <main className="App__main">
-        <Counters />
+        <Search />
       </main>
     </div>
   );

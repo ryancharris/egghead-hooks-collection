@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background: papayawhip
+}
+
 .App__header {
   height: 72px;
   display: flex;
@@ -29,6 +33,10 @@
   border-radius: 4px;
   border: 1px solid black;
   box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.App__main {
+  overflow: auto;
 }
 
 .Modal {
@@ -241,4 +249,127 @@
   font-weight: 700;
   background: white;
   border: 1px solid black;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.Search {
+  /* background: #cacada; */
+  display: flex;
+  font-family: sans-serif;
+  justify-content: center;
+  padding: 16px 32px;
+  border-radius: 4px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.SearchWidget {
+  background: #fff;
+  border-radius: 4px;
+  padding: 16px 12px;
+  width: 500px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+.SearchResults__empty {
+  padding: 16px 12px;
+}
+
+.SearchInput {
+  align-items: center;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  display: flex;
+  min-width: 320px;
+  padding: 8px;
+  transition: all 100ms ease-in;
+  margin-bottom: 16px;
+}
+
+.SearchInput.focused {
+  border: 1px solid black;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+.SearchInput__input {
+  border: none;
+  font-size: 24px;
+  height: 32px;
+  width: 100%;
+}
+
+.SearchInput__icon-wrapper {
+  margin-left: auto;
+  padding-left: 8px;
+  pointer-events: none;
+}
+
+.SearchInput__icon {
+  color: gray;
+  transition: all 100ms ease-in;
+}
+
+.SearchInput.focused .SearchInput__icon {
+  color: black;
+}
+
+.ResultCard {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 12px;
+  margin-bottom: 24px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.ResultCard:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.ResultCard:last-of-type {
+  margin-bottom: 0;
+}
+
+.ResultCard__content {
+  width: 85%;
+}
+
+.ResultCard__header {
+  margin-bottom: 8px;
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.ResultCard__icons {
+  position: absolute;
+  top: 18px;
+  right: 12px;
+}
+
+.ResultCard__beer {
+  color: #000;
+}
+
+.ResultCard:hover .ResultCard__beer {
+  color: #e8ae27;
+}
+
+.ResultCard__burger {
+  color: #000;
+  margin-right: 12px;
+}
+
+.ResultCard:hover .ResultCard__burger {
+  color: #694f12;
 }
