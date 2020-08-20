@@ -194,3 +194,51 @@
 .SearchInput.focused .SearchInput__icon {
   color: black;
 }
+
+.Counters {
+  font-family: sans-serif;
+  font-size: 28px;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Counters__main {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+.Counters__section {
+  padding: 32px 16px;
+  margin: 12px 0;
+  border-radius: 4px;
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1px 1px 35x rgba(0, 0, 0, 0.25);
+}
+
+.Counters__actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 33.33%;
+  font-size: 18px;
+}
+
+.Counters__button {
+  height: 32px;
+  width: 32px;
+  text-align: center;
+  border-radius: 4px;
+  margin: 0 8px;
+  font-weight: 700;
+  background: white;
+  border: 1px solid black;
+}

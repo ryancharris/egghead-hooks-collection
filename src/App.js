@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-import SearchInput from './04-use-ref/SearchInput'
+import Counters from './05-use-ref-data/Counters'
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <p>useRef</p>
       </header>
       <main className="App__main">
-        <SearchInput autoFocus={true} />
+        <Counters />
       </main>
     </div>
   );
