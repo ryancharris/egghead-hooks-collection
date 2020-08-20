@@ -1,16 +1,16 @@
 import React from "react";
 import "./App.css";
 
-import Modals from "./03-use-layout-effect/Modals";
+import SearchInput from './04-use-ref/SearchInput'
 
 function App() {
   return (
     <div className="App">
       <header className="App__header">
-        <p>useLayoutEffect</p>
+        <p>useRef</p>
       </header>
       <main className="App__main">
-        <Modals />
+        <SearchInput autoFocus={true} />
       </main>
     </div>
   );
