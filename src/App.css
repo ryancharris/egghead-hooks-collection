@@ -3,7 +3,7 @@
 }
 
 body {
-  background: papayawhip
+  background: lightblue;
 }
 
 .App__header {
@@ -20,11 +20,9 @@ body {
 .App {
   font-family: sans-serif;
   text-align: center;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .App__content {
@@ -372,4 +370,8 @@ a {
 
 .ResultCard:hover .ResultCard__burger {
   color: #694f12;
+}
+
+.MapView__input {
+  margin: 24px 0;
 }
