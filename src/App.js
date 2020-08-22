@@ -4,7 +4,6 @@ import MapView from "./07-use-memo/MapView";
 export default function App() {
   const [nasaLocations, setNasaLocations] = useState([]);
 
-  // Returns an array of 484 results from the NASA API
   useEffect(() => {
     fetch("https://data.nasa.gov/resource/gvk9-iz74.json")
       .then((res) => res.json())
