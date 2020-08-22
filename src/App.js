@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import MapView from "./07-use-memo/MapView";
+import MapView from "./08-use-callback/MapView";
 
 export default function App() {
   const [nasaLocations, setNasaLocations] = useState([]);
