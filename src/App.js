@@ -1,12 +1,9 @@
 import React from "react";
-import AppointmentForm from "./09-use-reducer/AppointmentForm";
+import useNasaData from "./10-use-debug-value/useNasaData";
 
 export default function App() {
-  return (
-    <div className="App">
-      <main>
-        <AppointmentForm />
-      </main>
-    </div>
-  );
+  const nasaData = useNasaData();
+  console.log(nasaData);
+
+  return <div className="App"></div>;
 }
