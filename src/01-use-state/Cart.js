@@ -13,9 +13,7 @@ function Cart() {
         quantity={apples}
         add={() => setApples(apples + 1)}
         remove={() => {
-          if (apples <= 0) {
-            setApples(0);
-          } else {
+          if (apples >= 1) {
             setApples(apples - 1);
           }
         }}
@@ -26,9 +24,7 @@ function Cart() {
         quantity={oranges}
         add={() => setOranges(oranges + 1)}
         remove={() => {
-          if (oranges <= 0) {
-            setOranges(0);
-          } else {
+          if (oranges >= 1) {
             setOranges(oranges - 1);
           }
         }}
