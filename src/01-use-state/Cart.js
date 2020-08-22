@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-
 import CartItem from "./CartItem";
 
 function Cart() {
   const [apples, setApples] = useState(0);
   const [oranges, setOranges] = useState(0);
-
   return (
     <div className="Cart">
       <CartItem
@@ -18,7 +16,6 @@ function Cart() {
           }
         }}
       />
-
       <CartItem
         name="Oranges"
         quantity={oranges}
@@ -29,9 +26,10 @@ function Cart() {
           }
         }}
       />
+
       <section className="Cart__total">
         <span className="Cart__total-label">Total items:</span>
-        <span className="Cart__total-label">{apples + oranges}</span>
+        <span className="Cart__total-label">{0}</span>
       </section>
     </div>
   );
