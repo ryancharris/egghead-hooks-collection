@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background: lightpink;
+}
+
 .App__header {
   height: 72px;
   display: flex;
@@ -153,6 +157,7 @@
 
 .SearchInput {
   align-items: center;
+  background: white;
   border: 1px solid lightgray;
   border-radius: 4px;
   display: flex;
