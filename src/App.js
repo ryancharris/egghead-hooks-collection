@@ -10,32 +10,22 @@ function App() {
   const [dayData, setDayData] = useState(null);
 
   useEffect(() => {
-    document.title = `${new Date().toLocaleString()} on Mars`;
+    document.title = `${new Date().toLocaleString()}`;
   });
 
   useEffect(() => {
-    const apiData = fetchDataFromAPI();
-
-    apiData
-      .then((res) => setData(res))
-      .catch((err) => {
-        console.log(err);
-        setData(null);
-      });
+    fetchDataFromAPI().then((res) => setData(res));
   }, []);
 
   useEffect(() => {
     if (data) {
-      const dataForDay = parseDataForDay(data);
+      const dataForDay = parseDataForDay(data, day);
       setDayData(data[dataForDay]);
     }
   }, [day, data]);
 
   return (
     <div className="App">
-      <header className="App__header">
-        <p>useEffect</p>
-      </header>
       <main className="App__content">
         <WeatherDisplay day={day} setDay={setDay} dayData={dayData} />
       </main>
