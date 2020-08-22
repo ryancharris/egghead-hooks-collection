@@ -2,19 +2,18 @@ import React, { useEffect, useLayoutEffect } from "react";
 
 function Modals() {
   useEffect(() => {
-    const greenSquare = document.querySelector(".Modal--lime");
-    greenSquare.style.transform = "translate(-50%, -50%)";
-    greenSquare.style.left = "50%";
-    greenSquare.style.top = "50%";
+    const greenModal = document.querySelector(".Modal--lime");
+    greenModal.style.transform = "translateX(-50%)";
+    greenModal.style.left = "50%";
+    greenModal.style.top = "0";
   });
 
   useLayoutEffect(() => {
-    const purpleSquare = document.querySelector(".Modal--purple");
-    purpleSquare.style.transform = "translate(-50%, -50%)";
-    purpleSquare.style.left = "50%";
-    purpleSquare.style.top = "50%";
+    const purpleModal = document.querySelector(".Modal--purple");
+    purpleModal.style.transform = "translateX(-50%)";
+    purpleModal.style.left = "50%";
+    purpleModal.style.bottom = "0";
   });
-
   return (
     <div className="Modals">
       <div className="Modal Modal--lime">Modal--lime</div>

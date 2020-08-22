@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background: violet;
+}
+
 .App__header {
   height: 72px;
   display: flex;
@@ -34,21 +38,20 @@
 .Modal {
   display: flex;
   flex-direction: column;
-  width: 100px;
-  height: 100px;
+  justify-content: center;
+  width: 250px;
+  height: 250px;
   position: absolute;
-  left: 0;
   border-radius: 4px;
+  background: white;
 }
 
 .Modal--purple {
-  top: 25px;
-  border: 3px solid rebeccapurple;
+  border: 10px solid rebeccapurple;
 }
 
 .Modal--lime {
-  bottom: 25px;
-  border: 3px solid limegreen;
+  border: 10px solid limegreen;
 }
 
 /* 02-use-effect */
