@@ -42,7 +42,7 @@ function Map({ coords }) {
               fontFamily: "system-ui",
               fill: "#5D5A6D",
               fontSize: 12,
-              transform: "rotate(20deg)",
+              fontWeight: "bold",
             }}
           >
             {name}

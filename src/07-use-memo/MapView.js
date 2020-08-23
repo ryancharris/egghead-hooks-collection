@@ -1,5 +1,4 @@
 import React, { useMemo, useState } from "react";
-
 import Map from "./Map";
 
 function MapView({ locations }) {
@@ -7,17 +6,18 @@ function MapView({ locations }) {
   const [inputValue, setInputValue] = useState("");
 
   useMemo(() => {
+    let centers = [];
     if (locations.length > 0) {
-      let centers = [];
       const data = locations
-        .filter((loc) =>
-          loc.center.toLowerCase().includes(inputValue.toLowerCase())
-        )
+        .filter((loc) => {
+          return loc.center.toLowerCase().includes(inputValue.toLowerCase());
+        })
         .filter((loc) => {
           if (!centers.includes(loc.center)) {
             centers.push(loc.center);
             return loc;
           }
+
           return false;
         })
         .map((loc) => {
@@ -34,17 +34,11 @@ function MapView({ locations }) {
   return (
     <div className="MapView">
       <div className="MapView__input">
-        <label
-          htmlFor="search"
-          style={{
-            display: "block",
-          }}
-        >
-          Search for location:
-        </label>
+        <label htmlFor="search">Search for location:</label>
         <input
           name="search"
           type="search"
+          style={{ marginLeft: "12px" }}
           onChange={(event) => setInputValue(event.currentTarget.value)}
         />
       </div>
