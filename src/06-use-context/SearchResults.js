@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 
-import { SearchContext } from "./Search";
 import ResultCard from "./ResultCard";
+
+import { SearchContext } from "./SearchPage";
 
 function SearchResults() {
   const context = useContext(SearchContext);

@@ -8,15 +8,13 @@ import React, {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
-import { SearchContext } from "./Search";
+import { SearchContext } from "./SearchPage";
 
 function SearchInput({ autoFocus }) {
-  const context = useContext(SearchContext);
   const inputRef = useRef(null);
   const [focused, setFocused] = useState(null);
+  const context = useContext(SearchContext);
 
-  // Use our ref to focus the input on initial render
-  // based upon the value of autoFocus.
   useLayoutEffect(() => {
     if (autoFocus) {
       inputRef.current.focus();
@@ -24,9 +22,6 @@ function SearchInput({ autoFocus }) {
     }
   }, [autoFocus]);
 
-  // Listen for clicks and focus or blur the input
-  // based on on what element the user clicks on. We
-  // also use this to determine our input's className.
   useEffect(() => {
     function handleClick(event) {
       if (event.target === inputRef.current) {

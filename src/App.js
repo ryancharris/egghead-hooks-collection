@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.css";
 
-import Search from "./06-use-context/Search";
+import SearchPage from "./06-use-context/SearchPage";
 
 function App() {
   return (
     <div className="App">
       <main className="App__main">
-        <Search />
+        <SearchPage />
       </main>
     </div>
   );

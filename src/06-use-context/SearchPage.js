@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 
-import SearchWidget from './SearchWidget'
+import SearchWidget from "./SearchWidget";
 
-import {fetchApiData} from './utils'
-
+import { fetchApiData } from "./utils";
 
 export const SearchContext = React.createContext();
 
-function Search() {
+function SearchPage() {
   const [inputValue, setInputValue] = useState("");
   const [searchResults, setSearchResults] = useState([]);
 
@@ -17,17 +16,17 @@ function Search() {
   }, [inputValue]);
 
   return (
-    <div className="Search">
+    <div className="SearchPage">
       <SearchContext.Provider
         value={{
           results: searchResults,
           setInputValue: setInputValue,
         }}
       >
-          <SearchWidget />
+        <SearchWidget />
       </SearchContext.Provider>
     </div>
   );
 }
 
-export default Search;
+export default SearchPage;
