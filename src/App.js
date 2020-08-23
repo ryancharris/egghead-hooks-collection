@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import MapView from "./08-use-callback/MapView";
 
+export const geoUrl =
+  "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
+
 export default function App() {
   const [nasaLocations, setNasaLocations] = useState([]);
 

@@ -1,22 +1,22 @@
 import React, { useCallback, useState } from "react";
-
 import Map from "./Map";
 
 function MapView({ locations }) {
   const [inputValue, setInputValue] = useState("");
 
   const createCoordsForMap = useCallback(() => {
+    let centers = [];
     if (locations.length > 0) {
-      let centers = [];
       return locations
-        .filter((loc) =>
-          loc.center.toLowerCase().includes(inputValue.toLowerCase())
-        )
+        .filter((loc) => {
+          return loc.center.toLowerCase().includes(inputValue.toLowerCase());
+        })
         .filter((loc) => {
           if (!centers.includes(loc.center)) {
             centers.push(loc.center);
             return loc;
           }
+
           return false;
         })
         .map((loc) => {

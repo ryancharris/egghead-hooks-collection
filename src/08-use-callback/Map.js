@@ -5,9 +5,7 @@ import {
   Geography,
   Marker,
 } from "react-simple-maps";
-
-const geoUrl =
-  "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
+import { geoUrl } from "../App.js";
 
 function Map({ locations, inputValue, createCoordsForMap }) {
   const coords = createCoordsForMap(locations, inputValue);
