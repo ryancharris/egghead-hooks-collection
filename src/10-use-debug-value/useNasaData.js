@@ -7,7 +7,7 @@ const Status = {
   FAILED: "failed",
 };
 
-const URL = `https://api.nasa.gov/insight_weather/?api_key=${process.env.REACT_APP_NASA_KEY}&feedtype=json&ver=1.0`;
+const URL = `https://api.nasa.gov/insight_weather/?api_key=${process.env.REACT_APP_NASA_API_KEY}&feedtype=json&ver=1.0`;
 
 function useNasaData() {
   const [status, setStatus] = useState(Status.NOT_LOADED);
@@ -30,8 +30,7 @@ function useNasaData() {
   }, []);
 
   useDebugValue(status, (status) => {
-    const date = new Date(Date.now());
-    return `${status} ${date.toISOString()}`;
+    return `${status.toUpperCase()}`;
   });
 
   return locations;
