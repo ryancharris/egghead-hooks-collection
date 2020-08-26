@@ -30,7 +30,8 @@ function useNasaData() {
   }, []);
 
   useDebugValue(status, (status) => {
-    return `${status.toUpperCase()}`;
+    const date = new Date(Date.now());
+    return `${status} ${date.toISOString()}`;
   });
 
   return locations;
